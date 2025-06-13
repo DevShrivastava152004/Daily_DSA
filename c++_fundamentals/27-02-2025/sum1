@@ -1,0 +1,10 @@
+#include<iostream>
+using namespace std;
+int add(int arr[], int size)
+{
+    if(size<4)
+    {
+        cout<<"Array should have atleast 4 elements." << endl;
+        return 0;
+    }
+}

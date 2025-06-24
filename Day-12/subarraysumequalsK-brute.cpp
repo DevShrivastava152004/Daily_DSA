@@ -21,7 +21,7 @@ int subarraySum(vector<int> &arr, int k)
 }
 int main() {
     vector<int> arr = {2,1,7,-4,2,1,3,4,-15,2,-3,6};
-    int k = 2;
+    int k = 6;
     cout << "Number of subarrays with sum " << k << ": " << subarraySum(arr, k) << endl;
     return 0;
 }

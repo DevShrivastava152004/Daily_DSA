@@ -11,7 +11,7 @@ int main()
     {
     cin>>arr[i];
     }
-    cout<<"Enter the index to delete";
+    cout << "Enter the index where you want to delete (0 to " << n << "): ";
     cin>>index;
     if(index<0||index>n)
     {

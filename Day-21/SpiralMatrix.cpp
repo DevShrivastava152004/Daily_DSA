@@ -4,8 +4,8 @@
 using namespace std;
 vector<int> spiralOrder(vector<vector<int>>& mat)
 {
-    int m = mat.size();
-    int n = mat[0].size();
+    int m = mat.size();//find the number of rows in the matrix
+    int n = mat[0].size();// this ise used to find the number of columns in the matrix
     int srow =0,scol=0,erow=m-1,ecol=n-1;//srow-->starting row,scol-->starting column
     vector<int>ans;
     while(srow <= erow && scol <= ecol)
@@ -23,7 +23,7 @@ vector<int> spiralOrder(vector<vector<int>>& mat)
             //bottom row(right to left)
         for(int j=ecol-1;j>=scol;j--)
         {
-            if(srow == erow)// this conidtion is used to check if there is only one row left to print so that we don't print the same row again
+            if(srow == erow)// to avoid overlapping of rows
                 break;
             ans.push_back(mat[erow][j]);
         }

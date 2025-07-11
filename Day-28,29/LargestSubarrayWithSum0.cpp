@@ -31,12 +31,7 @@ int main()
 {
     int arr[] = {15, -2, 2, -8, 1, 7, 10, 23};
     int n = sizeof(arr)/sizeof(arr[0]);
-
-    // Function call
     int maxLength = maxLen(arr, n);
-
-    // Output
     cout << "Length of the longest subarray with sum 0 is: " << maxLength << endl;
-
     return 0;
 }

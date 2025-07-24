@@ -9,13 +9,15 @@ int SearchInsertPosition(vector<int>& arr,int x)
     while(low <= high)
     {
         int mid = (low+high)/2;
+        //maybe an answer
         if(arr[mid] >= x)
         {
             ans = mid;
+            //look for small index on  the left side
             high = mid-1;
         }
         else{
-            low = mid+1;
+            low = mid+1;//look for right
         }
     }
     return ans;

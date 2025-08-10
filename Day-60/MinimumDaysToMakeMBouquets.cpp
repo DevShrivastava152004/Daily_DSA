@@ -4,7 +4,7 @@
 #include<algorithm>
 #include<climits>
 using namespace std;
-bool possible(vector<int> &arr, int day, int m,int k)
+bool possible(vector<int> &arr, int day, int m,int k)// Function to check if it is possible to make m bouquets in given days
 {
     int n = arr.size();
     int cnt =0;
@@ -24,7 +24,7 @@ bool possible(vector<int> &arr, int day, int m,int k)
     noOfBouquests += (cnt/k);
     return noOfBouquests >= m;
 }
-int roseGarden(vector<int> arr,int k,int m)
+int roseGarden(vector<int> arr,int k,int m)// Function to find the minimum number of days required to make m bouquets
 {
     long long val = m* 1ll * k * 1ll;
     int n = arr.size();

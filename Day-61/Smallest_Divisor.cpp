@@ -38,3 +38,5 @@ int main()
     cout << "The minimum divisor is: " << ans << endl;;
     return 0;
 }
+// this is the optimal solution using binary search with time complexity O(n log(max(arr)))
+// where n is the size of the array and max(arr) is the maximum element in the array and space complexity O(1)

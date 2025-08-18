@@ -27,3 +27,5 @@ int main()
     cout << "The missing number is: " << ans ;
     return 0;
 }
+// The code finds the k-th missing number in a sorted array using binary search.
+// the time complexity is O(log n) and space complexity is O(1).

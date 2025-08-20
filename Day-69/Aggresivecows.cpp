@@ -48,6 +48,6 @@ int aggressiveCows(vector<int> & stalls, int k)
         cout << "The maximum pssible minimum distance is : " << ans;
         return 0;
     }
-    //This is the brute force approach to find the maximum possible minimum distance between cows placed in stalls.
-// The time complexity is O(n log m) where n is the number of stalls and m is the maximum distance.
+    // this is the optiamal solution to the problem of placing cows in stalls with maximum minimum distance.
+// The time complexity is O(n log m) where n is the number of stalls and m is the range of distances.
 // The space complexity is O(1) as we are using only a constant amount of extra space.

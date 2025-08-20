@@ -2,7 +2,6 @@
 #include<vector>
 #include<algorithm>
 using namespace std;
-
 bool canWePlaceCows(vector<int> &stalls, int dist, int cows)
 {
     int n = stalls.size();
@@ -22,11 +21,9 @@ bool canWePlaceCows(vector<int> &stalls, int dist, int cows)
 }
 int aggressiveCows(vector<int> & stalls, int k)
 {
-    int n = stalls.size(); // size of array
-    // sort the stalls;
+    int n = stalls.size(); 
     sort(stalls.begin(), stalls.end());
     int low = 1, high = stalls[n-1] - stalls[0];
-    //Now apply binary Search
     while( low <= high)
     {
         int mid = (low + high) / 2;

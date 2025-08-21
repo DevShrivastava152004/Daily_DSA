@@ -1,4 +1,7 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include<vector>
+#include<algorithm>
+#include<numeric>
 using namespace std;
 int countStudents( vector<int> &arr ,int pages)
 {

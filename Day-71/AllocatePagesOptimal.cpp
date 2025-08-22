@@ -1,63 +1,58 @@
-#include <iostream>
+#include<iostream>
 #include<vector>
-#include<algorithm>
-#include<numeric>
 using namespace std;
-int countStudents( vector<int> &arr ,int pages)
+bool isValid(vector<int> &arr, int n, int m, int maxAllowedPages) // O(n)
 {
-    int n = arr.size();
-    int students = 1;
-    long long pagesStudent = 0;
-    for(int i=0; i < n;i++)
+    int students = 1, pages = 0;
+    for(int i=0;i<n;i++)
     {
-        if(pagesStudent + arr[i] <= pages)
+        if(arr[i] > maxAllowedPages)
         {
-            pagesStudent += arr[i];
+            return false;
         }
-        else {
+        if(pages + arr[i] <= maxAllowedPages){
+            pages += arr[i];
+        }
+        else 
+        {
             students++;
-            pagesStudent = arr[i];
+            pages = arr[i];
         }
+        }
+        return students > m ? false : true;
     }
-    return students;
-}
-int findPages(vector<int> & arr, int n, int m)
+int allocateBooks(vector<int> &arr, int n, int m) // O(logN * n) where N is the range where we apply our binary search and  n is the total number of books we have
 {
-    if( m > n)
-    return -1;
-    int low = *max_element(arr.begin() , arr.end());
-    int high = accumulate(arr.begin() , arr.end() , 0);
-    while( low <= high)
+    if(m > n)
     {
-        int mid = (low+high)/2;
-        int students = countStudents(arr,mid);
-        if(students > m)
-        {
-            low = mid +1;
-        }
-        else
-        {
-            high = mid - 1;
-        }
+        return -1;
     }
-        return low;
+    int sum = 0;
+    for(int i=0;i<n;i++)
+{
+    sum += arr[i];
+}
+int ans = -1;
+int st = 0, end = sum; // range of possible answer
+while (st <= end)
+{
+    int mid = st +(end-st)/2; 
+    if(isValid(arr,n,m,mid)) // ;eft
+    {
+        ans  = mid;
+        end = mid -1;
     }
+    else 
+    {
+        st = mid + 1;
+    }
+}
+return ans;
+}
 int main()
 {
-    vector<int> arr ={25,46,28,49,24};
-    int n =5;
-    int m = 4;
-    int ans = findPages(arr,n,m);
-    cout << "The answer is - " << ans;
-    return 0;
+    vector<int> arr = {15,17,20};
+    int n = 4, m= 2;
+cout<< allocateBooks(arr , n , m) << endl;
+return 0;
 }
-
-
-
-
-
-
-
-
-
-

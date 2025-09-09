@@ -12,3 +12,15 @@ string LargrstOddNumber(string num)
     }
     return "";
 }
+int main()
+{
+    string num;
+    cout<<"Enter a name: ";
+    cin>>num;
+    string result = LargrstOddNumber(num);
+    if(result != "")
+        cout<<"Largest odd number is: "<<result<<endl;
+    else
+        cout<<"No odd number found."<<endl;
+    return 0;
+}

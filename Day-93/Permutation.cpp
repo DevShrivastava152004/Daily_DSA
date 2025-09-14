@@ -1,7 +1,6 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-
         void solve(vector<int> nums, vector<vector<int>>& ans, int index)
         {
             if(index >= nums.size())

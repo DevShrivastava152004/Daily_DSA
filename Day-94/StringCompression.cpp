@@ -24,7 +24,7 @@ int compress(vector<char>& chars)
          else
         {
             chars[idx++] = ch;
-            string str = to_string(count);
+            string str = to_string(count);// ye humne to_string use kiya hai count ko string me convert karne ke liye
             for(int j=0; j<str.size(); j++)// this is modern cpp - for(char dig : str)
             {
                 chars[idx++] = str[j];

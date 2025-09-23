@@ -14,9 +14,20 @@ int main()
 {
     string s = "abcde";
     string goal = "cdeab";
-    cout << (rotateString(s, goal) ? "true" : "false") << endl;
+    if(rotateString(s, goal))
+    {
+        cout << "true" << endl;
+    }
+    else 
+    {
+        cout <<" false" << endl;
+    }
     goal = "adeac";
-    cout << (rotateString(s, goal) ? "true" : "false" ) << endl;
-
+    if(rotateString(s, goal)){
+        cout << "true" << endl;
+    }
+    else {
+        cout << "false" <<endl;
+    }
     return 0;
 }

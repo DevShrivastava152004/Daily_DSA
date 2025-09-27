@@ -23,7 +23,7 @@ return -1;
 }
 int Search(vector<int> arr,int tar)
 {
-       return  binarySearch(arr,tar,0,arr.size()-1);
+       return  binarySearch(arr,tar,0,arr.size()-1); // this is used to call the binary search function with initial start and end values
 }
 int main()
 {
@@ -32,3 +32,4 @@ int main()
     cout << Search(arr,tar) << endl;
     return 0;
 }
+// the time complexity for this code is O(log n) and the space complexity is O(n) due to recursive stack space

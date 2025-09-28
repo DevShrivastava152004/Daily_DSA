@@ -31,3 +31,4 @@ int main()
     }
     return 0;
 }
+// the time complexity is O(n) and space complexity is O(n)

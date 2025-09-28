@@ -15,3 +15,4 @@ using namespace std;
      cout << isSorted(arr, arr.size()) << endl;
      return 0;
  }
+ // the time complexity for this code is O(n) and the space complexity is O(n) due to recursive stack space

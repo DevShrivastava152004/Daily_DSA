@@ -9,7 +9,7 @@ public class Main {
      list.insertFirst(2);
      list.insertFirst(8);
      list.insertFirst(17);
-
+     list.insertLast(val: 99);
      list.display();
     }
 }

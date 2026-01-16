@@ -54,12 +54,29 @@ public class InsertBeforeNodeInDLL {
 
     return head;
     }
+    private static Node insertAtTail(Node head, int k)
+    {
+        if(head == null)
+        {
+            return new Node(k);
+        }
+        Node tail = head;
+        while(tail.next != null)
+        {
+            tail = tail.next;
+        }
+        Node newNode = new Node(k);
+        newNode.back = tail;
+        tail.next = newNode;
+        return head;
+    }
 
     public static void main(String[] args) {
         int[]  arr = {12,5,8,7};
         Node head = convertArr2DLL(arr);
         Node node = head.next.next;
-        head = insertBeforeNode(head,node,99);
+        
+        head = insertAtTail(head , 100);
         print(head);
     }
 }

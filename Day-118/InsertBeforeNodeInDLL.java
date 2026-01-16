@@ -10,7 +10,7 @@ class Node {
         this.back = null;
     }
 };
-public class InsertBeforeKthInDLL {
+public class InsertBeforeNodeInDLL {
     public static void print(Node head)
     {
         while(head != null)

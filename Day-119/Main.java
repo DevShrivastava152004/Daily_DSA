@@ -106,3 +106,5 @@ public class Main {
         sol.print(head);
     }
 }
+// this time complexity is  O(2N)
+// and space complexity is O(N)

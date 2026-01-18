@@ -63,7 +63,7 @@ class Solution {
         Stack<Integer> st = new Stack<>();
 
         // Pointer to traverse list
-        Node temp = head;
+        Node temp = head;// if this line doesn't exist we can't reach the second value because if you do this you've already destroyed your head pointer and then the list is gone.
 
         // Push all node data to stack
         while (temp != null) {

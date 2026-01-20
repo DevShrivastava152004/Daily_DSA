@@ -83,3 +83,4 @@ public class Sort {
         }
     }
 }
+// the TC of this code is O(2N) and the SC of this code is O(1).

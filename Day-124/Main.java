@@ -29,7 +29,7 @@ class Solution {
         return prev;
     }
 }
-public class Main {
+public class ReverseList {
     public static void main(String[] args) {
         ListNode head = new ListNode(1);
         head.next = new ListNode(2);
@@ -49,3 +49,5 @@ public class Main {
         System.out.println();
     }
 }
+// the time complexity is O(N) because we are traversing each node of the linked list exactly once
+// and the space complexity is O(1) because we are not using any additional data structure or recursion.

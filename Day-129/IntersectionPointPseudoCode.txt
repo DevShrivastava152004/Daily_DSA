@@ -1,0 +1,19 @@
+map<Node,int>mpp // we will take a map data structure which will be storing a node and an integer value
+temp = head1 // taking a temp to place at head1
+// then we will traverse 
+while(temp != null)
+{
+    mpp[temp] = 1;
+    temp = temp.next; // This is the first traversal which will basically store all the node and the values in the memory
+}
+temp = head2
+while(temp != null)
+{
+    if(mpp.find(temp) == check)
+    return temp;
+    temp = temp.next; // This is the second traversal where we will check whether the map has that value or not and if it is there then we will return that value and if there is not a single value entirely in the list then we  will return null
+}
+return null;
+
+// this will give the TC of O(N1 * ) + O(N2 * )
+// and the space complexity is O(N1)

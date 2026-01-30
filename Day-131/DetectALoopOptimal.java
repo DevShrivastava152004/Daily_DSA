@@ -1,10 +1,8 @@
-// Brute Force Approach
-import java.util.*;
 class Node {
     int data;
     Node next;
 
-    Node(int data,Node next)
+    Node(int data, Node next)
     {
         this.data = data;
         this.next = next;
@@ -16,25 +14,24 @@ class Node {
     }
 }
 class Solution {
-    public boolean detectLoop(Node head)
+    public boolean DetectLoop(Node head)
     {
-        Node temp = head;
-        HashMap<Node, Integer> nodeMap = new HashMap<>();
-        while(temp != null)
+        Node slow = head;
+        Node fast = head;
+        while(fast != null && fast.next != null)
         {
-            if(nodeMap.containsKey(temp)) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if(slow == fast)
                 return true;
-            }
-            nodeMap.put(temp,1);
-            temp = temp.next;
         }
         return false;
-    }
+    }     
 }
-public class DetectALoop
+public class DetectALoopOptimal
 {
     public static void main(String[] args) {
-        Node head = new Node(1);
+         Node head = new Node(1);
         Node second = new Node(2);
         Node third = new Node(3);
         Node fourth = new Node(4);
@@ -44,17 +41,20 @@ public class DetectALoop
         second.next = third;
         third.next = fourth;
         fourth.next = fifth;
+        // Create a loop
         fifth.next = third;
 
         Solution sol = new Solution();
+        if(sol.DetectLoop(head))
+        {
+            System.out.println("Loop detected");
+         }
+         else
+             {
+                System.out.println("Loop not detected");
 
-        if(sol.detectLoop(head)){
-            System.err.println("Loop detected in the linked list");
-
-        } else {
-            System.err.println("No loop detected in the linked list");
+            }
         }
+
     }
-}
-// the TC --> O(N*LogN)
-// SC-->O(N)
+

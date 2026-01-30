@@ -55,3 +55,5 @@ public class DetectALoop
         }
     }
 }
+// the TC --> O(N*LogN)
+// SC-->O(N)

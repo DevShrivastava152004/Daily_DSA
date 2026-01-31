@@ -30,7 +30,7 @@ class Solution {
             res--;
             if(res == 0)
             {
-             Node middle = temp.next;
+             
              temp.next = temp.next.next;
               break;
             }

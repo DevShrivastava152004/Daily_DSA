@@ -41,8 +41,7 @@ public class DetectALoopOptimal
         second.next = third;
         third.next = fourth;
         fourth.next = fifth;
-        // Create a loop
-        fifth.next = third;
+        fifth.next = third;// to create a loop
 
         Solution sol = new Solution();
         if(sol.DetectLoop(head))
@@ -55,6 +54,5 @@ public class DetectALoopOptimal
 
             }
         }
-
     }
 

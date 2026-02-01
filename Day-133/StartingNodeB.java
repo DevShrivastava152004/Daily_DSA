@@ -34,7 +34,7 @@ class Solution
     }
 }
 
-public class StartingNode {
+public class StartingNodeB {
     public static void main(String[] args) {
         ListNode head = new ListNode(13);
         head.next = new ListNode(2);

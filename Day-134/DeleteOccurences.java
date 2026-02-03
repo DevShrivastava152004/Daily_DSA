@@ -91,3 +91,4 @@ public class DeleteOccurences {
         printList(head);
     }
 }
+//  TC --> O(n) and SC --> O(1)
